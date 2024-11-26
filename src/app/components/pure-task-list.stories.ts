@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/angular";
 import { componentWrapperDecorator, moduleMetadata } from "@storybook/angular";
 
-import TaskListComponent from "./task-list.component";
 import TaskComponent from "./task.component";
 import { CommonModule } from "@angular/common";
 
 import * as TaskStories from './task.stories';
+import PureTaskListComponent from "./pure-task-list.component";
 
-const meta: Meta<TaskListComponent> = {
-  component: TaskListComponent,
+const meta: Meta<PureTaskListComponent> = {
+  component: PureTaskListComponent,
   title: 'Task List',
   tags: ['autodocs'],
   decorators: [
     moduleMetadata({
-      declarations: [TaskListComponent, TaskComponent],
+      declarations: [PureTaskListComponent, TaskComponent],
       imports: [CommonModule],
     }),
     componentWrapperDecorator(
@@ -26,7 +26,7 @@ const meta: Meta<TaskListComponent> = {
 };
 export default meta;
 
-type Story = StoryObj<TaskListComponent>;
+type Story = StoryObj<PureTaskListComponent>;
 
 export const Default: Story = {
   args: {
