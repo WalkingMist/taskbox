@@ -7,6 +7,7 @@ import { TasksState } from "../state/task.state";
 import TaskComponent from "./task.component";
 import TaskListComponent from "./task-list.component";
 import PureTaskListComponent from "./pure-task-list.component";
+import PureInboxScreenComponent from './pure-inbox-screen.component';
 
 @NgModule({
   imports: [
