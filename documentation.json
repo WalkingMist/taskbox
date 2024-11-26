@@ -1127,7 +1127,7 @@
         },
         {
             "name": "TaskComponent",
-            "id": "component-TaskComponent-86b5ed4b369bc953ed4267177e03985a899cdca5ce44528b736ec714d11dece5b8d1b7655b582c1ff5b186f36c5264923cc38273e92bdcac25d9bba6df864984",
+            "id": "component-TaskComponent-dc798a84e6d35f2c45a177c58ef187bf90a75046df9d0141b2c0ba0745efd694333c3630648624b90690814ab13ccc8a4d2223b926ab31e98f36bb62b2d323ac",
             "file": "src/app/components/task.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1137,7 +1137,7 @@
             "selector": "app-task",
             "styleUrls": [],
             "styles": [],
-            "template": "<div class=\"list-item {{ task?.state }}\">\n  <label\n    [attr.aria-label]=\"'archiveTask-' + task?.id\"\n    for=\"checked-{{ task?.id }}\"\n    class=\"checkbox\">\n    <input\n      type=\"checkbox\"\n      disabled=\"true\"\n      [defaultChecked]=\"task?.state === 'TASK_ARCHIVED'\"\n      name=\"checked-{{ task?.id }}\"\n      id=\"checked-{{ task?.id }}\" />\n    <span class=\"checkbox-custom\"\n          (click)=\"onArchive(task?.id)\"></span>\n  </label>\n  <label\n    [attr.aria-label]=\"task?.title + ''\"\n    for=\"title-{{ task?.id }}\"\n    class=\"title\">\n    <input\n      type=\"text\"\n      [value]=\"task?.title\"\n      readonly=\"true\"\n      id=\"title-{{ task?.id }}\"\n      name=\"title-{{ task?.id }}\"\n      placeholder=\"Input title\" />\n  </label>\n  <button\n    *ngIf=\"task?.state !== 'TASK_ARCHIVED'\"\n    class=\"pin-button\"\n    [attr.aria-label]=\"'pinTask-' + task?.id\"\n    (click)=\"onPin(task?.id)\">\n    <span class=\"icon-star\"></span>\n  </button>\n</div>\n",
+            "template": "<div class=\"list-item {{ task?.state }}\">\n  <label\n    [attr.aria-label]=\"'archiveTask-' + task?.id\"\n    for=\"checked-{{ task?.id }}\"\n    class=\"checkbox\">\n    <input\n      type=\"checkbox\"\n      disabled=\"true\"\n      [defaultChecked]=\"task?.state === 'TASK_ARCHIVED'\"\n      name=\"checked-{{ task?.id }}\"\n      id=\"checked-{{ task?.id }}\" />\n    <span class=\"checkbox-custom\"\n          (click)=\"onArchive(task?.id)\"></span>\n  </label>\n  <label\n    [attr.aria-label]=\"task?.title + ''\"\n    for=\"title-{{ task?.id }}\"\n    class=\"title\">\n    <input\n      type=\"text\"\n      [value]=\"task?.title\"\n      readonly=\"true\"\n      id=\"title-{{ task?.id }}\"\n      name=\"title-{{ task?.id }}\"\n      placeholder=\"Input title\"\n      style=\"background-color: red;\" />\n  </label>\n  <button\n    *ngIf=\"task?.state !== 'TASK_ARCHIVED'\"\n    class=\"pin-button\"\n    [attr.aria-label]=\"'pinTask-' + task?.id\"\n    (click)=\"onPin(task?.id)\">\n    <span class=\"icon-star\"></span>\n  </button>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -1146,7 +1146,7 @@
                     "name": "task",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 45,
+                    "line": 46,
                     "type": "Task",
                     "decorators": []
                 }
@@ -1157,7 +1157,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 51,
+                    "line": 52,
                     "type": "EventEmitter"
                 },
                 {
@@ -1165,7 +1165,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 48,
+                    "line": 49,
                     "type": "EventEmitter"
                 }
             ],
@@ -1184,7 +1184,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 57,
+                    "line": 58,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1212,7 +1212,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 53,
+                    "line": 54,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1237,7 +1237,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\";\r\nimport { Task } from '../models/task.model';\r\n\r\n@Component({\r\n  selector: 'app-task',\r\n  template: `\r\n  <div class=\"list-item {{ task?.state }}\">\r\n    <label\r\n      [attr.aria-label]=\"'archiveTask-' + task?.id\"\r\n      for=\"checked-{{ task?.id }}\"\r\n      class=\"checkbox\">\r\n      <input\r\n        type=\"checkbox\"\r\n        disabled=\"true\"\r\n        [defaultChecked]=\"task?.state === 'TASK_ARCHIVED'\"\r\n        name=\"checked-{{ task?.id }}\"\r\n        id=\"checked-{{ task?.id }}\" />\r\n      <span class=\"checkbox-custom\"\r\n            (click)=\"onArchive(task?.id)\"></span>\r\n    </label>\r\n    <label\r\n      [attr.aria-label]=\"task?.title + ''\"\r\n      for=\"title-{{ task?.id }}\"\r\n      class=\"title\">\r\n      <input\r\n        type=\"text\"\r\n        [value]=\"task?.title\"\r\n        readonly=\"true\"\r\n        id=\"title-{{ task?.id }}\"\r\n        name=\"title-{{ task?.id }}\"\r\n        placeholder=\"Input title\" />\r\n    </label>\r\n    <button\r\n      *ngIf=\"task?.state !== 'TASK_ARCHIVED'\"\r\n      class=\"pin-button\"\r\n      [attr.aria-label]=\"'pinTask-' + task?.id\"\r\n      (click)=\"onPin(task?.id)\">\r\n      <span class=\"icon-star\"></span>\r\n    </button>\r\n  </div>\r\n  `,\r\n})\r\nexport default class TaskComponent {\r\n  @Input()\r\n  task?: Task;\r\n\r\n  @Output()\r\n  onPinTask = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onArchiveTask = new EventEmitter<Event>();\r\n\r\n  onPin(id: any) {\r\n    this.onPinTask.emit(id);\r\n  }\r\n\r\n  onArchive(id: any) {\r\n    this.onArchiveTask.emit(id);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\";\r\nimport { Task } from '../models/task.model';\r\n\r\n@Component({\r\n  selector: 'app-task',\r\n  template: `\r\n  <div class=\"list-item {{ task?.state }}\">\r\n    <label\r\n      [attr.aria-label]=\"'archiveTask-' + task?.id\"\r\n      for=\"checked-{{ task?.id }}\"\r\n      class=\"checkbox\">\r\n      <input\r\n        type=\"checkbox\"\r\n        disabled=\"true\"\r\n        [defaultChecked]=\"task?.state === 'TASK_ARCHIVED'\"\r\n        name=\"checked-{{ task?.id }}\"\r\n        id=\"checked-{{ task?.id }}\" />\r\n      <span class=\"checkbox-custom\"\r\n            (click)=\"onArchive(task?.id)\"></span>\r\n    </label>\r\n    <label\r\n      [attr.aria-label]=\"task?.title + ''\"\r\n      for=\"title-{{ task?.id }}\"\r\n      class=\"title\">\r\n      <input\r\n        type=\"text\"\r\n        [value]=\"task?.title\"\r\n        readonly=\"true\"\r\n        id=\"title-{{ task?.id }}\"\r\n        name=\"title-{{ task?.id }}\"\r\n        placeholder=\"Input title\"\r\n        style=\"background-color: red;\" />\r\n    </label>\r\n    <button\r\n      *ngIf=\"task?.state !== 'TASK_ARCHIVED'\"\r\n      class=\"pin-button\"\r\n      [attr.aria-label]=\"'pinTask-' + task?.id\"\r\n      (click)=\"onPin(task?.id)\">\r\n      <span class=\"icon-star\"></span>\r\n    </button>\r\n  </div>\r\n  `,\r\n})\r\nexport default class TaskComponent {\r\n  @Input()\r\n  task?: Task;\r\n\r\n  @Output()\r\n  onPinTask = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onArchiveTask = new EventEmitter<Event>();\r\n\r\n  onPin(id: any) {\r\n    this.onPinTask.emit(id);\r\n  }\r\n\r\n  onArchive(id: any) {\r\n    this.onArchiveTask.emit(id);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
