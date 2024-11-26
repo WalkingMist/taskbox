@@ -28,7 +28,8 @@ import { Task } from '../models/task.model';
         readonly="true"
         id="title-{{ task?.id }}"
         name="title-{{ task?.id }}"
-        placeholder="Input title" />
+        placeholder="Input title"
+        style="background-color: red;" />
     </label>
     <button
       *ngIf="task?.state !== 'TASK_ARCHIVED'"
