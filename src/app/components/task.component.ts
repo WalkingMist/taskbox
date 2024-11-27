@@ -46,10 +46,10 @@ export default class TaskComponent {
   task?: Task;
 
   @Output()
-  onPinTask = new EventEmitter<Event>();
+  onPinTask = new EventEmitter<string>();
 
   @Output()
-  onArchiveTask = new EventEmitter<Event>();
+  onArchiveTask = new EventEmitter<string>();
 
   onPin(id: any) {
     this.onPinTask.emit(id);

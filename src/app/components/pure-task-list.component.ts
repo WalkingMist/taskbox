@@ -44,10 +44,10 @@ export default class PureTaskListComponent {
   loading = false;
 
   @Output()
-  onPinTask = new EventEmitter<Event>();
+  onPinTask = new EventEmitter<string>();
 
   @Output()
-  onArchiveTask = new EventEmitter<Event>();
+  onArchiveTask = new EventEmitter<string>();
 
   @Input()
   set tasks(arr: Task[]) {
